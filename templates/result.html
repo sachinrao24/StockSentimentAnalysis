@@ -26,9 +26,9 @@
 				<p class='result-p'>
                     {{ prediction_text }}
                     {% if result==1 %}
-                        <img src="{{ url_for('static', filename='green.png') }}" width="40px" height="50" style="display: inline-block;">
+                        <img src="{{ url_for('static', filename='fall.png') }}" width="40px" height="50" style="display: inline-block;">
                     {% else %}
-                        <img src="{{ url_for('static', filename='red.png') }}" width="40px" height="50" style="display: inline-block;">
+                        <img src="{{ url_for('static', filename='rise.png') }}" width="40px" height="50" style="display: inline-block;">
                     {% endif %}
                 </p>
 			</div>
