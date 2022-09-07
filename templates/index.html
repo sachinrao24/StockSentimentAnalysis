@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <script src="https://kit.fontawesome.com/ac0df00c3d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <title>Stock Price Sentiment Analysis</title>
+</head>
+<body>
+    <div class="top-div">
+        <h1 class="main-heading">Stock Price Trend Prediction App</h1>
+        <h3 class="main-heading">An app that predicts the potential uptrend or downtrend in stock price based on the news headlines about that stock</h3>
+        <hr>
+    </div>
+
+    <div class="middle-div">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <h4>Company Name</h4>
+            <input type="text" name="company_name" placeholder="Eg: Amazon" required>
+            <h4>Headlines related to the company</h4>
+            <textarea type="textarea" placeholder="Insert news headlines here" rows="12" cols="60" required></textarea> <br>
+            <input type="submit" class="btn" value="Predict">
+        </form>
+        <hr>
+    </div>
+
+    <footer class="footer">
+        <a target="_blank" href="https://github.com/sachinrao24?tab=repositories"><i class="fab fa-github fa-2xl icon"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/sachinkrao7/"><i class="fab fa-linkedin fa-2xl icon"></i></a>
+        <h3>Sachin K Rao</h3>
+    </footer>
+</body>
+</html>
