@@ -12,7 +12,7 @@ import joblib
 
 app = Flask(__name__)
 model = joblib.load('model/stock_senti.pkl')
-vectorizer = joblib.load('model/tfidf.pkl')
+vectorizer = joblib.load('model/tfidf_vector.pkl')
 
 @app.route('/',methods=['GET'])
 def Home():
