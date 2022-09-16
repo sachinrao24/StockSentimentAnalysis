@@ -11,8 +11,8 @@ import numpy as np
 import joblib
 
 app = Flask(__name__)
-model = joblib.load('model/randomForestClassifier.pkl')
-vectorizer = joblib.load('model/countVectorizer.pkl')
+model = joblib.load('model/stock_senti.pkl')
+vectorizer = joblib.load('model/tfidf.pkl')
 
 @app.route('/',methods=['GET'])
 def Home():
