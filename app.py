@@ -9,8 +9,10 @@ import sklearn
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 app = Flask(__name__)
+port = int(os.environ.get('PORT', 5000))
 model = joblib.load('model/stock_senti.pkl')
 vectorizer = joblib.load('model/tfidf_vector.pkl')
 
@@ -40,4 +42,4 @@ def predict():
         return render_template('index.html')
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
